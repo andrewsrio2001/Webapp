@@ -122,5 +122,4 @@ Building scalable tech solutions one container at a time! 🚀
 
 ---
 
-Would you like me to add your company logo or links to your website/social media?
 ```
