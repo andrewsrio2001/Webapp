@@ -23,5 +23,6 @@ phases:
       - echo Writing image definitions file...
       - printf '[{"name":"web_application_python","imageUri":"%s"}]' "812541448385.dkr.ecr.ap-south-1.amazonaws.com/web_application_python:latest" > imagedefinitions.json
 
+artifacts:
   files:
     - imagedefinitions.json
