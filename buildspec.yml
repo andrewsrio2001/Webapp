@@ -13,13 +13,13 @@ phases:
       - echo Build started
       - echo Building the Docker image...
       - docker build -t web_application_python .
-      - docker tag web_application_python:latest $REPOSITORY_URI:$IMAGE_TAG
+      - docker tag web_application_python:latest 812541448385.dkr.ecr.ap-south-1.amazonaws.com/web_application_python:latest
 
   post_build:
     commands:
       - echo Build completed
       - echo Pushing the Docker image to ECR...
-      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - docker push 812541448385.dkr.ecr.ap-south-1.amazonaws.com/web_application_python:latest
       - echo Writing image definitions file...
       - printf '[{"name":"web_application_python","imageUri":"%s"}]' "$REPOSITORY_URI:$IMAGE_TAG" > imagedefinitions.json
 
